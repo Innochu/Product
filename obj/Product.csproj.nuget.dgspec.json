@@ -4,6 +4,21 @@
     "C:\\Users\\Decagon\\source\\repos\\Product\\Product.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Decagon\\source\\repos\\Product.Models\\Products.Models.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Decagon\\source\\repos\\Product.Models\\Products.Models.csproj",
+        "projectName": "Products.Models",
+        "projectPath": "C:\\Users\\Decagon\\source\\repos\\Product.Models\\Products.Models.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
     "C:\\Users\\Decagon\\source\\repos\\Product\\Product.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +42,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Decagon\\source\\repos\\Product.Models\\Products.Models.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\source\\repos\\Product.Models\\Products.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -45,6 +64,12 @@
               "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.11, )"
             },

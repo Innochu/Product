@@ -1175,6 +1175,15 @@
             "rid": "win"
           }
         }
+      },
+      "Products.Models/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Products.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Products.Models.dll": {}
+        }
       }
     }
   },
@@ -3361,15 +3370,22 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Products.Models/1.0.0": {
+      "type": "project",
+      "path": "../Product.Models/Products.Models.csproj",
+      "msbuildProject": "../Product.Models/Products.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.AspNetCore.OpenApi >= 7.0.11",
       "Microsoft.EntityFrameworkCore >= 7.0.11",
+      "Microsoft.EntityFrameworkCore.Design >= 7.0.11",
       "Microsoft.EntityFrameworkCore.InMemory >= 7.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.11",
+      "Products.Models >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -3399,7 +3415,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Decagon\\source\\repos\\Product.Models\\Products.Models.csproj": {
+              "projectPath": "C:\\Users\\Decagon\\source\\repos\\Product.Models\\Products.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -3417,6 +3437,12 @@
             "version": "[7.0.11, )"
           },
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[7.0.11, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.11, )"
           },
