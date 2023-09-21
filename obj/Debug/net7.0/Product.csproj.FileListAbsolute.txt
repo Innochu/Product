@@ -74,3 +74,6 @@ C:\Users\Decagon\source\repos\Product\obj\Debug\net7.0\refint\Product.dll
 C:\Users\Decagon\source\repos\Product\obj\Debug\net7.0\Product.pdb
 C:\Users\Decagon\source\repos\Product\obj\Debug\net7.0\Product.genruntimeconfig.cache
 C:\Users\Decagon\source\repos\Product\obj\Debug\net7.0\ref\Product.dll
+C:\Users\Decagon\source\repos\Product\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Decagon\source\repos\Product\bin\Debug\net7.0\Product.Models.dll
+C:\Users\Decagon\source\repos\Product\bin\Debug\net7.0\Product.Models.pdb
