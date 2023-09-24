@@ -44,5 +44,32 @@ namespace Product.Controllers
 
 			return Ok(productmodels);                                                // return contact with an Ok response
 		}
+
+		[HttpPut]
+		[Route ("{id:Guid}")]
+
+		public async Task<IActionResult> UpdateRequest([FromRoute] Guid id, UpdateProductRequest updateProductRequest)
+		{
+			var myupdatedpoduct = await _productsDbContext.Products.FindAsync(id); //is the same as below
+																				   //_ = await _productsDbContext.Products.FindAsync(id);
+			
+
+
+			if (myupdatedpoduct != null)
+			{
+				myupdatedpoduct.ProductName = updateProductRequest.ProductName;
+				myupdatedpoduct.UnitPrice = updateProductRequest.UnitPrice;
+				myupdatedpoduct.ProductCategory = updateProductRequest.ProductCategory;
+				myupdatedpoduct.Status = updateProductRequest.Status;
+
+
+				await _productsDbContext.SaveChangesAsync();
+				return Ok(myupdatedpoduct);
+				
+			}
+			
+
+			return NotFound();
+		}
 	}
 }
